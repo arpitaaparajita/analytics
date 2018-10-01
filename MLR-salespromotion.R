@@ -76,8 +76,8 @@ par(mfrow=c(1,1)) # revert back to one by one plots
 plot(fit2,which=1)  # no pattern, equal variance
 plot(fit2,2)  # Residuals are normally distributed
 plot(fit2,3)  # No hetero-scedascity, not like funnel shaped
-plot(fit2,4)  # tells outliers which affect model
-omni[-c(11,14,15),]
+plot(fit2,4)  # tells outliers which affect model, here 11,14,15
+omni[-c(11,14,15),] #remove the outliers and check if adjusted r square get better
 
 fit3 = lm(sales ~ price + promotion, data=omni[-c(11,14,15),])
 plot(fit3,4)
